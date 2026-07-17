@@ -1,18 +1,19 @@
-   # View
-      # Accept request and send respone
-
+  # CRUD Operatinos
+  
 from rest_framework import generics
 from .model import Product
-from .model import Student
-from serializer import ProductSerializer
-from serializer import StudentSerializer
+from .serializer import ProductSerializer
 
 
-class ProductList(generics.ListCreateAPIView):
-    queryset = Product.objects.all();
+   # CREATE + READ ALL
+class ProductListCreate(generics.ListCreateAPIView):
+    queryset = Product.objects.all()
     serializer_class = ProductSerializer
     
-
-class StudentList(generics.ListCreateAPIView):
-    queryset = Student.objects.all()
-    serializer_class = StudentSerializer
+    # READ ONE + UPDATE + DELETE
+    
+class ProductDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer
+    
+    

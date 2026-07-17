@@ -1,3 +1,16 @@
-from django.shortcuts import render
+from django.urls import path
+from .view import ProductListCreate, ProductDetail
+from django.urls import include, path
 
-# Create your views here.
+urlpatterns = [
+    path("products/", ProductListCreate.as_view()),
+    path("products/<int:pk>/", ProductDetail.as_view())
+];
+
+urlpatterns = [
+    path("api/", include("products.urls")),
+
+];
+
+
+

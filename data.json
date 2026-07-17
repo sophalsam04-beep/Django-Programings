@@ -1,0 +1,28 @@
+{
+    "count":50,
+    "next":"http://127.0.0.1:8000/products/?page=2",
+    "previous":null,
+    "results":[
+            {
+                "id":1,
+                "name":"Un virak",
+                "age": 44,
+                "price": 2200
+
+            },
+
+            {
+                "id": 2,
+                "name":"Sam sophal",
+                "age": 25,
+                "price": 4000
+            }
+    ]
+
+
+
+
+
+
+
+}
